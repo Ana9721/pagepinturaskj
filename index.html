@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinturas KJ | Arte en Óleo sobre Lienzo</title>
+    <meta name="description" content="Pinturas originales al óleo sobre lienzo por Karlita Jiménez. Obras de arte abstracto, retratos y paisajes.">
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Pacifico&family=Open+Sans:wght@300;400&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Pacifico&family=Open+Sans:wght@300;400&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Ribeye+Marrow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="./images/icono.png" type="image/x-icon">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <style>
+        /* Estilos adicionales para el Swiper */
+        .art-swiper {
+            padding: 30px 0 50px;
+            overflow: hidden;
+        }
+        
+        .swiper-wrapper {
+            padding-bottom: 10px;
+        }
+        
+        .swiper-slide {
+            width: auto;
+            height: auto;
+        }
+        
+        .swiper-button-next, 
+        .swiper-button-prev {
+            color: #000;
+            background: rgba(255,255,255,0.7);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .swiper-button-next:hover, 
+        .swiper-button-prev:hover {
+            background: rgba(255,255,255,0.9);
+        }
+        
+        .swiper-button-next::after, 
+        .swiper-button-prev::after {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .swiper-pagination-bullet {
+            background: #ccc;
+            opacity: 1;
+        }
+        
+        .swiper-pagination-bullet-active {
+            background: #000;
+        }
+        
+        @media (max-width: 768px) {
+            .swiper-button-next, 
+            .swiper-button-prev {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Pinturas KJ</div>
+    
+                <!-- Botón de menú hamburguesa -->
+                <div class="menu-toggle" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+    
+                <nav id="nav-menu">
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#historia">Sobre mí</a></li>
+                        <li><a href="#productos">Galería</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content">               
+                <h1>Pinturas <span>KJ</span></h1>                
+                <p>Arte que transforma espacios y emociones al óleo</p>
+                <div class="hero-buttons">
+                    <a href="#productos" class="btn">Explora la Galería</a>
+                    <a href="#contacto" class="btn btn-outline">Contacta al Artista</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Sobre el Artista -->
+    <section class="about-artist" id="historia">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sobre mí</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="artist-profile">
+                <div class="artist-image">
+                    <img src="images/hero.jpeg" alt="Karlita-artista" class="profile-img">
+                    <div class="signature">Karlita</div>
+                </div>
+                
+                <div class="artist-bio">
+                    <h3>Karla </h3>
+                    <p class="artist-quote">"frase de pinturas kj *"</p>
+                    
+                    <div class="bio-text">
+                        <p>Karlita es una artista apasionada cuya sensibilidad y talento se expresan con fuerza en cada una de sus obras. Encontró en la pintura no solo una forma de expresión, sino también un refugio donde volcar emociones, recuerdos e intuiciones que transforma en arte. <br><br>
+                        Su estilo se caracteriza por la riqueza de detalles, y una paleta de colores cálidos que transmiten calma, nostalgia y profundidad. Karlita se inspira en la naturaleza, en lo cotidiano y en las emociones humanas, logrando que cada una de sus piezas cuente una historia silenciosa que el espectador puede sentir, más que entender. <br><br>
+                        Las obras de Karlita no solo decoran espacios, sino que también invita a detenerse, observar y conectar con lo esencial.  </p>
+                        
+                        <ul class="artist-details">
+                            <li><i class="fas fa-palette"></i> Técnica: Óleo sobre lienzo</li>
+                            <li><i class="fas fa-globe-americas"></i> Influencias: Arte tradicional mexicano</li>                           
+                        </ul>
+                        
+                        <a href="#contacto" class="btn">Encarga tu obra</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria de Productos con Swiper -->
+    <section class="gallery" id="productos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Galería de Obras</h2>
+                <div class="divider"></div>
+                <p>Explora nuestra colección de pinturas originales</p>
+            </div>
+            
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">Todas</button>
+                <button class="filter-btn" data-filter="abstracto">Abstracto</button>
+                <button class="filter-btn" data-filter="retratos">Retratos</button>
+                <button class="filter-btn" data-filter="paisajes">Paisajes</button>
+            </div>
+            
+            <!-- Contenedor Swiper -->
+            <div class="swiper art-swiper">
+                <div class="swiper-wrapper art-grid">
+                    <!-- Obra 1 -->
+                    <div class="swiper-slide art-item" data-category="abstracto">
+                        <div class="art-card">
+                            <img src="images/pintura1.png" alt="Obra abstracta">
+                            <div class="art-overlay">
+                                <h3>Armonía Cromática</h3>
+                                <p>Óleo sobre lienzo - 60x80cm</p>
+                                <div class="art-price">$8,500 MXN</div>
+                                <a href="#" class="btn btn-small ver-detalle" data-img="images/pintura1.png" data-title="Armonía Cromática" data-desc="Obra abstracta que juega con colores complementarios">Ver detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Obra 2 -->
+                    <div class="swiper-slide art-item" data-category="retratos">
+                        <div class="art-card">
+                            <img src="images/pintura2.jpg" alt="Retrato femenino">
+                            <div class="art-overlay">
+                                <h3>Mirada Profunda</h3>
+                                <p>Óleo sobre lienzo - 50x70cm</p>
+                                <div class="art-price">$7,200 MXN</div>
+                                <a href="#" class="btn btn-small ver-detalle" data-img="images/pintura2.jpg" data-title="Mirada Profunda" data-desc="Retrato que captura la esencia del sujeto">Ver detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Obra 3 -->
+                    <div class="swiper-slide art-item" data-category="paisajes">
+                        <div class="art-card">
+                            <img src="images/pintura3.jpg" alt="Paisaje natural">
+                            <div class="art-overlay">
+                                <h3>Atardecer Serrano</h3>
+                                <p>Óleo sobre lienzo - 70x90cm</p>
+                                <div class="art-price">$9,800 MXN</div>
+                                <a href="#" class="btn btn-small ver-detalle" data-img="images/pintura3.jpg" data-title="Atardecer Serrano" data-desc="Paisaje que captura la belleza natural">Ver detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Obra 4 -->
+                    <div class="swiper-slide art-item" data-category="retratos">
+                        <div class="art-card">
+                            <img src="images/pintura4.png" alt="Retrato masculino">
+                            <div class="art-overlay">
+                                <h3>Reflexiones</h3>
+                                <p>Óleo sobre lienzo - 60x60cm</p>
+                                <div class="art-price">$7,500 MXN</div>
+                                <a href="#" class="btn btn-small ver-detalle" data-img="images/pintura4.png" data-title="Reflexiones" data-desc="Retrato introspectivo">Ver detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Obra 5 -->
+                    <div class="swiper-slide art-item" data-category="abstracto">
+                        <div class="art-card">
+                            <img src="images/pintura5.png" alt="Obra abstracta">
+                            <div class="art-overlay">
+                                <h3>Caos Ordenado</h3>
+                                <p>Óleo sobre lienzo - 80x80cm</p>
+                                <div class="art-price">$10,200 MXN</div>
+                                <a href="#" class="btn btn-small ver-detalle" data-img="images/pintura5.png" data-title="Caos Ordenado" data-desc="Abstracción geométrica">Ver detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Controles de navegación -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            
+            <div class="gallery-cta">
+                <p>¿Interesado en una obra personalizada?</p>
+                <a href="#contacto" class="btn">Encarga tu pintura</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="artLightbox">
+        <div class="lightbox-content">
+            <span class="close-btn">&times;</span>
+            <img src="" alt="" class="lightbox-img">
+            <div class="lightbox-info">
+                <h3></h3>
+                <p class="art-description"></p>
+                <p class="art-dimensions"></p>
+                <p class="art-price"></p>
+                <a href="#contacto" class="btn">Consultar disponibilidad</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <div class="footer-logo">Pinturas KJ</div>
+                        <p class="footer-tagline">Creando emociones a través del óleo desde 2019</p>
+                        <div class="footer-payment">
+                            <!-- <p>Aceptamos:</p>
+                            <div class="payment-methods">
+                                <i class="fab fa-cc-visa"></i>
+                                <i class="fab fa-cc-mastercard"></i>
+                                <i class="fab fa-cc-paypal"></i>                                
+                            </div> -->
+                        </div>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h3>Contacto</h3>
+                        <ul class="footer-contact">
+                            <li><i class="fas fa-envelope"></i> contacto@pinturaskj.com</li>
+                            <li><i class="fas fa-phone-alt"></i> +52 461 123 55 99</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Guanajuato, México</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h3>Horario</h3>
+                        <ul class="footer-hours">
+                            <li>Lunes-Viernes: 10am - 6pm</li>
+                            <li>Sábado: 11am - 4pm</li>
+                            <li>Domingo: Cerrado</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h3>Sígueme</h3>
+                        <div class="social-links">
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                            <a href="https://wa.me/524611235599" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                        
+                        <div class="newsletter">
+                            <p>Suscríbete para novedades</p>
+                            <form class="newsletter-form">
+                                <input type="email" placeholder="Tu correo" required>
+                                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-legal">
+                    <p>&copy; 2025 Pinturas KJ. Todos los derechos reservados.</p>
+                    <div class="legal-links">
+                        <a href="#">Política de privacidad</a>
+                        <a href="#">Términos de servicio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+    
+</body>
+</html>
